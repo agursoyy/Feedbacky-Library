@@ -113,6 +113,11 @@ module.exports = (env) => {
         path.resolve('tests'),
       ],
       extensions: ['.ts', '.tsx', '.js', '.jsx', '.scss'],
+      alias: {
+        react: 'preact/compat',
+        'react-dom': 'preact/compat',
+        'react/jsx-runtime': 'preact/jsx-runtime',
+      },
     },
     devServer: {
       port: DEV_SERVER_PORT,
