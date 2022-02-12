@@ -1,0 +1,17 @@
+$extra-bold-font-weight: 800;
+$bold-font-weight: 700;
+$medium-font-weight: 500;
+$regular-font-weight: 400;
+
+$x-small-font-size: 12px;
+$small-font-size: 16px;
+$medium-font-size: 24px;
+$large-font-size: 36px;
+$x-large-font-size: 48px;
+
+$h1-header-font-size: $large-font-size;
+$h2-header-font-size: $medium-font-size;
+$h3-header-font-size: $small-font-size;
+$h4-header-font-size: $x-small-font-size;
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');

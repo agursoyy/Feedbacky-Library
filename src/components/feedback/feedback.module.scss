@@ -1,0 +1,27 @@
+@import 'src/common/style/responsive.scss';
+@import 'src/common/style/color.scss';
+@import 'src/common/style/mixin.scss';
+
+.feedbackContainer {
+  position: fixed;
+  left: 36px;
+  right: 36px;
+  bottom: 24px;
+  .feedbackButton {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    outline: none;
+    border: none;
+    padding: 16px 30px;
+    border-radius: 4px;
+
+    background-color: $primary-purple;
+    box-shadow: 0 8px 16px 0 rgba(33, 21, 81, 0.2);
+    color: $primary-white;
+
+    @include respond-small-screen() {
+      padding: 10px 22px;
+    }
+  }
+}

@@ -1,0 +1,54 @@
+@import 'src/common/style/variable.scss';
+
+$small-screen-max-width: $medium-screen-breakpoint - 1;
+$medium-screen-min-width: $medium-screen-breakpoint;
+$large-screen-min-width: $large-screen-breakpoint;
+$medium-screen-max-width: $large-screen-min-width - 1;
+$x-large-screen-min-width: $x-large-screen-breakpoint;
+
+$small-screen: '(max-width: #{$small-screen-max-width})';
+$medium-screen: '(min-width: #{$medium-screen-min-width}) and (max-width: #{$medium-screen-max-width})';
+$large-screen: '(min-width: #{$large-screen-min-width})';
+$x-large-screen: '(min-width: #{$x-large-screen-min-width})';
+
+@mixin respond-small-screen {
+  @media #{$small-screen} {
+    @content;
+  }
+}
+
+@mixin respond-medium-screen {
+  @media #{$medium-screen} {
+    @content;
+  }
+}
+
+@mixin respond-large-screen {
+  @media #{$large-screen} {
+    @content;
+  }
+}
+
+@mixin respond-x-large-screen {
+  @media #{$x-large-screen} {
+    @content;
+  }
+}
+
+@mixin visible-small-screen-only() {
+  @media #{$medium-screen}, #{$large-screen} {
+    display: none;
+  }
+}
+
+@mixin visible-medium-screen-only() {
+  @media #{$small-screen}, #{$large-screen} {
+    display: none;
+  }
+}
+
+@mixin visible-large-screen-only() {
+  @media #{$small-screen}, #{$medium-screen} {
+    display: none;
+  }
+}

@@ -1,0 +1,56 @@
+@import 'src/common/style/responsive.scss';
+@import 'src/common/style/color.scss';
+@import 'src/common/style/mixin.scss';
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: $primary-white;
+  @include font(b3, bold);
+
+  border-radius: 4px;
+
+  outline: none;
+  border: none;
+  cursor: pointer;
+
+  &.block {
+    width: 100%;
+  }
+
+  &.basic {
+    padding: 16px 24px;
+
+    @include respond-small-screen() {
+      padding: 14px 24px;
+    }
+
+    &.primary {
+      background-color: $primary-lighter-purple;
+
+      &:active,
+      &:hover {
+        background-color: $primary-purple;
+      }
+    }
+
+    &.secondary {
+      background-color: $primary-black;
+
+      &:active,
+      &:hover {
+        //background-color: $secondary-cobalt;
+      }
+    }
+  }
+
+  &.icon {
+    background-color: $primary-white;
+    padding: 4px;
+    :global(.MuiSvgIcon-root) {
+      color: $primary-black;
+    }
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json",
+    "sourceType": "module"
+  },
+  "plugins": ["@typescript-eslint", "react-hooks", "react", "import"],
+  "extends": [
+    "airbnb-base",
+    "airbnb-base/rules/strict",
+    "airbnb/rules/react",
+    "airbnb/rules/react-a11y",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:import/recommended",
+    "plugin:import/typescript",
+    "prettier"
+  ],
+  "rules": {
+    "class-methods-use-this": "off",
+    "no-underscore-dangle": ["error", { "allow": ["_id"] }],
+    "@typescript-eslint/no-implicit-any-catch": [
+      "off",
+      { "allowExplicitAny": true }
+    ],
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "react/jsx-filename-extension": [1, { "extensions": [".tsx", ".jsx"] }],
+    "react/function-component-definition": [
+      2,
+      { "namedComponents": "arrow-function" }
+    ],
+    "import/no-unresolved": 0,
+    "import/no-extraneous-dependencies": 0,
+    "import/extensions": [
+      2,
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never",
+        "scss": "always",
+        "module.scss": "always",
+        "mock": "always"
+      }
+    ]
+  },
+  "settings": {
+    "react": {
+      "pragma": "React",
+      "version": "detect"
+    }
+  },
+  "globals": {
+    "test": true, // Jest
+    "expect": true // Jest
+  }
+}

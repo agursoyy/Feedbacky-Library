@@ -1,0 +1,72 @@
+@import 'src/common/style/responsive.scss';
+@import 'src/common/style/color.scss';
+@import 'src/common/style/mixin.scss';
+
+.modal {
+  position: absolute;
+  right: 0;
+  bottom: 100px;
+  padding: 24px;
+  width: 400px;
+
+  background-color: $primary-white;
+
+  border-radius: 4px;
+  box-shadow: 0 20px 40px rgba($primary-black, 0.1);
+
+  @include respond-small-screen() {
+    width: 100%;
+  }
+
+  .formGroup {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    .label {
+      margin-bottom: 8px;
+      color: $secondary-gray;
+
+      @include font(b3, medium);
+    }
+
+    .formControl {
+      width: 100%;
+      margin-top: 8px;
+      padding: 16px;
+      display: block;
+
+      border: solid 1px $stroke-faded;
+      background-color: $primary-white;
+
+      @include font(b3, medium);
+
+      &::placeholder {
+        color: $secondary-gray;
+      }
+    }
+
+    .input {
+      height: 50px;
+    }
+  }
+
+  .submitButton {
+    width: 100%;
+    height: 50px;
+
+    border-radius: 4px;
+    box-shadow: 0 8px 16px 0 rgba(33, 21, 81, 0.2);
+
+    @include font(b3, bold);
+
+    @include respond-small-screen() {
+      @include font(b3);
+    }
+  }
+
+  .loadingSpinner {
+    width: 20px !important; //mui
+    height: 20px !important;
+  }
+}
