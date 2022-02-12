@@ -4,9 +4,8 @@ import styles from 'components/modal/Modal.module.scss';
 import classNames from 'classnames';
 import { FeedbackProps } from 'components/feedback/Feedback';
 import axios from 'axios';
-import CircularProgress from '@mui/material/CircularProgress';
 
-const ENDPOINT = 'https://feedbacky-api.herokuapp.com/api/feedback';
+const ENDPOINT = 'http://localhost:9000/api/feedback';
 
 interface ModalProps extends Omit<FeedbackProps, 'zIndex'> {
   closeModal: () => void;
@@ -80,12 +79,7 @@ const Modal = (props: ModalProps): JSX.Element => {
 
   const renderButtonContent = useMemo((): JSX.Element | string => {
     if (loading) {
-      return (
-        <CircularProgress
-          className={styles.loadingSpinner}
-          style={{ color: textColor }}
-        />
-      );
+      return <h1>Loading</h1>;
     }
     if (!formSubmitted) {
       return <>{submitButtonMessage} 👋</>;
@@ -100,7 +94,6 @@ const Modal = (props: ModalProps): JSX.Element => {
     loading,
     submitButtonMessage,
     submitError,
-    textColor,
     postSubmitMessage,
   ]);
 
