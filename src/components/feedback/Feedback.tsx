@@ -16,7 +16,7 @@ export interface FeedbackProps {
 }
 
 const Feedback = (props: FeedbackProps): JSX.Element => {
-  const [modalOpen, setModalOpen] = useState(true);
+  const [modalOpen, setModalOpen] = useState(false);
   const { zIndex, primaryColor, textColor } = props;
 
   const handleToggleModal = () => {
@@ -60,9 +60,9 @@ Feedback.defaultProps = {
   textColor: '#ffffff',
   postSubmitMessage: 'Thanks for your feedback!',
   submitButtonMessage: 'Send Feedback!',
-  showEmail: true,
+  showEmail: false,
   defaultEmail: '',
-  emailRequired: true,
+  emailRequired: false,
   zIndex: 999999,
 };
 
