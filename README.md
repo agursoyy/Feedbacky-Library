@@ -16,7 +16,7 @@ Feedbacky is a JS library for collecting visitor feedbacks across your web proje
 ## Usage
 
 ```javascript
-feedback.render({elementId: "feedback-el-root", config: {projectId: "PROJECT_ID_FROM_DASHBOARD_APP"})
+feedbacky.render({elementId: "feedback-el-root", config: {projectId: "PROJECT_ID_FROM_DASHBOARD_APP"}})
 ```
 
 ## Configuration
@@ -39,7 +39,7 @@ feedback.render({elementId: "feedback-el-root", config: {projectId: "PROJECT_ID_
 ### Example
 
 ```javascript
-feedback.render({elementId: "feedback-el-root", config: {projectId: "PROJECT_ID_FROM_DASHBOARD_APP", primaryColor: "#000000", textColor: "#ffffff", showEmail: "true", defaultEmail: "user@user.com", emailRequired: "true"})
+feedbacky.render({elementId: "feedback-el-root", config: {projectId: "PROJECT_ID_FROM_DASHBOARD_APP", primaryColor: "#000000", textColor: "#ffffff", showEmail: "true", defaultEmail: "user@user.com", emailRequired: "true"}})
 ```
 
 ## Admin Dashboard
