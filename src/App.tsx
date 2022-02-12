@@ -14,8 +14,14 @@ type RenderProps = {
 export const render = (renderProps: RenderProps) => {
   const el = document.getElementById(renderProps.elementId);
 
-  if (el) {
-    // eslint-disable-next-line react/jsx-props-no-spreading
-    ReactDOM.render(<Feedback {...renderProps.config} />, el);
+  if (!el) {
+    throw new Error('modal root element is missing');
   }
+
+  if (!renderProps.config.projectId) {
+    throw new Error('project Id is missing');
+  }
+
+  // eslint-disable-next-line react/jsx-props-no-spreading
+  ReactDOM.render(<Feedback {...renderProps.config} />, el);
 };
