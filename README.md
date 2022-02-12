@@ -1,16 +1,17 @@
 # Feedbacky: lightweight feedback collector
 
-Foobar is a js library for collecting visitor feedbacks across your web projects.
+Feedbacky is a JS library for collecting visitor feedbacks across your web projects.
 
 ## Installation
 
 ### Script Tag
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
-
 ```javascript
 <script src="https://unpkg.com/browse/feedbacky-library@0.0.1/dist/feedbacky.js"></script>
 ```
+### Include Stylesheet
+```link
+<link rel="stylesheet" href="https://unpkg.com/feedbacky-library@0.0.1/dist/feedbacky.css">
 
 ## Usage
 
@@ -35,6 +36,11 @@ feedback.render({elementId: "feedback-el-root", config: {projectId: "PROJECT_ID_
 | config.emailRequired       | whether email field is required                                                         | boolean  | false        | false                        |
 | config.zIndex              | z-index of modal container                                                              | string   | false        | 999999                       |
 
+### Example
+
+```javascript
+feedback.render({elementId: "feedback-el-root", config: {projectId: "PROJECT_ID_FROM_DASHBOARD_APP", primaryColor: "#000000", textColor: "#ffffff", showEmail: "true", defaultEmail: "user@user.com", emailRequired: "true"})
+```
 
 ## Admin Dashboard
 You have to create an account on [admin dashboard](https://feedbacky-dashboard.herokuapp.com/) to render feecbacky modal on your website. Feedbacks are directly posted to your created project on dashboard.
