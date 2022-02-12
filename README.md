@@ -12,6 +12,7 @@ Feedbacky is a JS library for collecting visitor feedbacks across your web proje
 ### Include Stylesheet
 ```link
 <link rel="stylesheet" href="https://unpkg.com/feedbacky-library@0.0.1/dist/feedbacky.css">
+```
 
 ## Usage
 
