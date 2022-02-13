@@ -42,7 +42,7 @@ function App()  {
 |----------------------------|-----------------------------------------------------------------------------------------|----------|--------------|------------------------------|
 |                            |                                                                                         |          |              |                              |
 | elementId                  | html element id that modal feecbacky modal will render                                  | string   | true         | null                         |
-| config                     | props used to customize feedbacky dashboard                                             | object   | true         | null                         |
+| config                     | props used to customize feedbacky modal                                                 | object   | true         | null                         |
 | config.projectId           | unique project id from feedbacky dashboard app                                          | string   | true         | null                         |
 | config.primaryColor        | color of the buttons on feedbacky modal                                                 | string   | false        | #764abc                      |
 | config.textColor           | text color of the buttons on feedbacky modal                                            | string   | false        | #ffffff                      |
