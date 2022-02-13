@@ -12,10 +12,23 @@ Feedbacky is a JS library for collecting visitor feedbacks across your web proje
 <script src="https://unpkg.com/feedbacky-library@0.0.1/dist/feedbacky.js"></script>
 ```
 
+### NPM Installation
+
+```bash
+npm install feedbacky-library
+```
+
 ## Usage
 
 ```javascript
 feedbacky.render({elementId: "feedback-el-root", config: {projectId: "PROJECT_ID_FROM_DASHBOARD_APP"}})
+```
+
+```react
+import {render} from 'feedbacky-library';
+useEffect(() => {
+  render({elementId: "feedbacky-el-root", config: {projectId: "PROJECT_ID_FROM_DASHBOARD_APP", primaryColor: "#f3f779", textColor: "blue", "showEmail": true}})
+}, []);
 ```
 
 ## Configuration
