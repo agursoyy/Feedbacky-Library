@@ -2,7 +2,7 @@
 
 Feedbacky is a JS library for collecting visitor feedbacks across your web projects.
 
-![Feedbacky Banner](https://imgur.com/a/3Zz5SOm)
+![Feedbacky Banner](https://i.imgur.com/GwGlFI9.jpeg)
 
 ## Installation
 
@@ -44,6 +44,7 @@ feedbacky.render({elementId: "feedback-el-root", config: {projectId: "PROJECT_ID
 ## Admin Dashboard
 You have to create an account on [admin dashboard](https://feedbacky-dashboard.herokuapp.com/) to render feecbacky modal on your website. Feedbacks are directly posted to your created project on dashboard.
 
+![Feedbacky Dashboard](https://i.imgur.com/SpzZBTz.jpg)
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
