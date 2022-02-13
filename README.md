@@ -24,11 +24,16 @@ npm install feedbacky-library
 feedbacky.render({elementId: "feedback-el-root", config: {projectId: "PROJECT_ID_FROM_DASHBOARD_APP"}})
 ```
 
-```react
+```javascript
 import {render} from 'feedbacky-library';
-useEffect(() => {
-  render({elementId: "feedbacky-el-root", config: {projectId: "PROJECT_ID_FROM_DASHBOARD_APP", primaryColor: "#f3f779", textColor: "blue", "showEmail": true}})
-}, []);
+
+function App()  {
+  useEffect(() => {
+    render({elementId: "feedbacky-root", config: {projectId: "PROJECT_ID_FROM_DASHBOARD_APP", primaryColor: "#f3f779", textColor: "blue", "showEmail": true}})
+  }, []);
+  
+  return <h1>app</h1>
+}
 ```
 
 ## Configuration
