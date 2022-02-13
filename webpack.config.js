@@ -53,7 +53,7 @@ module.exports = (env) => {
           test: /\.(scss)$/,
           exclude: /\.module\.(scss)$/,
           use: [
-            isLocal ? 'style-loader' : MiniCssExtractPlugin.loader,
+            'style-loader',
             {
               loader: 'css-loader',
               options: {
@@ -71,7 +71,7 @@ module.exports = (env) => {
         {
           test: /\.module\.(scss)$/,
           use: [
-            isLocal ? 'style-loader' : MiniCssExtractPlugin.loader,
+            'style-loader',
             {
               loader: 'css-loader',
               options: {
@@ -90,10 +90,6 @@ module.exports = (env) => {
       ],
     },
     plugins: [
-      new MiniCssExtractPlugin({
-        filename: 'feedbacky.css',
-        chunkFilename: isLocal ? '[id].css' : '[id].[contenthash].css',
-      }),
       ...(isLocal
         ? [
             new HtmlWebpackPlugin({
