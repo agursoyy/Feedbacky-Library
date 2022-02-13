@@ -82,7 +82,18 @@ const Modal = (props: ModalProps): JSX.Element => {
 
   const renderButtonContent = useMemo((): JSX.Element | string => {
     if (loading) {
-      return <h1>Loading</h1>;
+      return (
+        <svg className={styles.loadingSpinner} viewBox="0 0 25 25">
+          <circle
+            cx="12.5"
+            cy="12.5"
+            r="10"
+            fill="none"
+            strokeWidth="2.5"
+            stroke={textColor}
+          />
+        </svg>
+      );
     }
     if (!formSubmitted) {
       return <>{submitButtonMessage} 👋</>;
