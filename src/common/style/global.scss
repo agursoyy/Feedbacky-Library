@@ -1,13 +1,23 @@
-@import 'common/style/normalize.scss';
-
-html {
-  display: flex;
-  min-height: 100%;
-  height: auto !important;
+button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  box-sizing: border-box;
 }
-body {
-  min-height: 100%;
-  height: auto !important;
-  font-size: 16px;
-  font-family: 'DM Sans', sans-serif;
+
+a {
+  text-decoration: none;
+
+  user-select: none;
+
+  &:visited {
+    color: inherit;
+  }
+}
+
+input,
+textarea {
+  border: none;
+  outline: none;
+  box-sizing: border-box;
 }
