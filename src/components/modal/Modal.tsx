@@ -3,7 +3,6 @@ import React, { useMemo, useState } from 'react';
 import styles from 'components/modal/Modal.module.scss';
 import classNames from 'classnames';
 import { FeedbackProps } from 'components/feedback/Feedback';
-import axios from 'axios';
 
 const ENDPOINT = 'http://localhost:9000/api/feedback';
 
@@ -60,7 +59,11 @@ const Modal = (props: ModalProps): JSX.Element => {
       };
 
       try {
-        await axios.post(ENDPOINT, payload);
+        await fetch(ENDPOINT, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+        });
       } catch (err) {
         // eslint-disable-next-line no-console
         console.error(err);
