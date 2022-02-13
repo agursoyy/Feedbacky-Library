@@ -44,7 +44,8 @@ feedbacky.render({elementId: "feedback-el-root", config: {projectId: "PROJECT_ID
 ## Admin Dashboard
 You have to create an account on [admin dashboard](https://feedbacky-dashboard.herokuapp.com/) to render feecbacky modal on your website. Feedbacks are directly posted to your created project on dashboard.
 
+![Feedbacky Dashboard](https://i.imgur.com/hwajDq1.jpg)
+![Feedbacky Dashboard](https://i.imgur.com/fsu0kdd.jpg)
 ![Feedbacky Dashboard](https://i.imgur.com/SpzZBTz.jpg)
-
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
