@@ -2,6 +2,8 @@
 
 Feedbacky is a JS library for collecting visitor feedbacks across your web projects.
 
+![Feedbacky Banner](https://imgur.com/a/3Zz5SOm)
+
 ## Installation
 
 ### Script Tag
