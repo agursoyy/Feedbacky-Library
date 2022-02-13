@@ -2,7 +2,6 @@
 
 const path = require('path');
 
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const PROJECT_NAME = process.env.npm_package_name;
