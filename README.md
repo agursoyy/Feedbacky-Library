@@ -29,7 +29,7 @@ import {render} from 'feedbacky-library';
 
 function App()  {
   useEffect(() => {
-    render({elementId: "feedbacky-root", config: {projectId: "PROJECT_ID_FROM_DASHBOARD_APP", primaryColor: "#f3f779", textColor: "blue", "showEmail": true}})
+    render({elementId: "feedbacky-el-root", config: {projectId: "PROJECT_ID_FROM_DASHBOARD_APP", primaryColor: "#f3f779", textColor: "blue", "showEmail": true}})
   }, []);
   
   return <h1>app</h1>
