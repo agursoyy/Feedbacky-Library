@@ -7,6 +7,12 @@
   left: 36px;
   right: 36px;
   bottom: 24px;
+
+  @include respond-small-screen() {
+    left: 20px;
+    right: 20px;
+  }
+
   .feedbackButton {
     position: absolute;
     right: 0;

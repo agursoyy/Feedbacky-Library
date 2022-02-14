@@ -15,7 +15,8 @@
   box-shadow: 0 20px 40px rgba($primary-black, 0.1);
 
   @include respond-small-screen() {
-    width: 100%;
+    width: auto;
+    left: 0;
   }
 
   .formGroup {
