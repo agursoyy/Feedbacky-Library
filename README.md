@@ -2,6 +2,8 @@
 
 Feedbacky is a JS library for collecting visitor feedbacks across your web projects.
 
+![Feedbacky Banner](https://i.imgur.com/GwGlFI9.jpeg)
+
 ## Installation
 
 ### Script Tag
@@ -9,9 +11,11 @@ Feedbacky is a JS library for collecting visitor feedbacks across your web proje
 ```javascript
 <script src="https://unpkg.com/feedbacky-library@0.0.1/dist/feedbacky.js"></script>
 ```
-### Include Stylesheet
-```link
-<link rel="stylesheet" href="https://unpkg.com/feedbacky-library@0.0.1/dist/feedbacky.css">
+
+### NPM Installation
+
+```bash
+npm install feedbacky-library
 ```
 
 ## Usage
@@ -20,13 +24,25 @@ Feedbacky is a JS library for collecting visitor feedbacks across your web proje
 feedbacky.render({elementId: "feedback-el-root", config: {projectId: "PROJECT_ID_FROM_DASHBOARD_APP"}})
 ```
 
+```javascript
+import {render} from 'feedbacky-library';
+
+function App()  {
+  useEffect(() => {
+    render({elementId: "feedbacky-el-root", config: {projectId: "PROJECT_ID_FROM_DASHBOARD_APP", primaryColor: "#f3f779", textColor: "blue", "showEmail": true}})
+  }, []);
+  
+  return <h1>app</h1>
+}
+```
+
 ## Configuration
 
 | **config**                 | **description**                                                                         | **type** | **required** | **default**                  |
 |----------------------------|-----------------------------------------------------------------------------------------|----------|--------------|------------------------------|
 |                            |                                                                                         |          |              |                              |
 | elementId                  | html element id that modal feecbacky modal will render                                  | string   | true         | null                         |
-| config                     | props used to customize feedbacky dashboard                                             | object   | true         | null                         |
+| config                     | props used to customize feedbacky modal                                                 | object   | true         | null                         |
 | config.projectId           | unique project id from feedbacky dashboard app                                          | string   | true         | null                         |
 | config.primaryColor        | color of the buttons on feedbacky modal                                                 | string   | false        | #764abc                      |
 | config.textColor           | text color of the buttons on feedbacky modal                                            | string   | false        | #ffffff                      |
@@ -46,6 +62,8 @@ feedbacky.render({elementId: "feedback-el-root", config: {projectId: "PROJECT_ID
 ## Admin Dashboard
 You have to create an account on [admin dashboard](https://feedbacky-dashboard.herokuapp.com/) to render feecbacky modal on your website. Feedbacks are directly posted to your created project on dashboard.
 
-
+![Feedbacky Dashboard](https://i.imgur.com/hwajDq1.jpg)
+![Feedbacky Dashboard](https://i.imgur.com/fsu0kdd.jpg)
+![Feedbacky Dashboard](https://i.imgur.com/SpzZBTz.jpg)
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
