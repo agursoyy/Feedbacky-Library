@@ -9,7 +9,7 @@ Feedbacky is a JS library for collecting visitor feedbacks across your web proje
 ### Script Tag
 
 ```javascript
-<script src="https://unpkg.com/feedbacky-library@0.0.1/dist/feedbacky.js"></script>
+<script src="https://unpkg.com/feedbacky-library@0.0.9/dist/feedbacky.js"></script>
 ```
 
 ### NPM Installation
@@ -21,25 +21,36 @@ npm install feedbacky-library
 ## Usage
 
 ```javascript
-feedbacky.render({elementId: "feedback-el-root", config: {projectId: "PROJECT_ID_FROM_DASHBOARD_APP"}})
+feedbacky.render({
+  elementId: 'feedback-el-root',
+  config: { projectId: 'PROJECT_ID_FROM_DASHBOARD_APP' },
+});
 ```
 
 ```javascript
-import {render} from 'feedbacky-library';
+import { render } from 'feedbacky-library';
 
-function App()  {
+function App() {
   useEffect(() => {
-    render({elementId: "feedbacky-el-root", config: {projectId: "PROJECT_ID_FROM_DASHBOARD_APP", primaryColor: "#f3f779", textColor: "blue", "showEmail": true}})
+    render({
+      elementId: 'feedbacky-el-root',
+      config: {
+        projectId: 'PROJECT_ID_FROM_DASHBOARD_APP',
+        primaryColor: '#f3f779',
+        textColor: 'blue',
+        showEmail: true,
+      },
+    });
   }, []);
-  
-  return <h1>app</h1>
+
+  return <h1>app</h1>;
 }
 ```
 
 ## Configuration
 
 | **config**                 | **description**                                                                         | **type** | **required** | **default**                  |
-|----------------------------|-----------------------------------------------------------------------------------------|----------|--------------|------------------------------|
+| -------------------------- | --------------------------------------------------------------------------------------- | -------- | ------------ | ---------------------------- |
 |                            |                                                                                         |          |              |                              |
 | elementId                  | html element id that modal feecbacky modal will render                                  | string   | true         | null                         |
 | config                     | props used to customize feedbacky modal                                                 | object   | true         | null                         |
@@ -56,14 +67,27 @@ function App()  {
 ### Example
 
 ```javascript
-feedbacky.render({elementId: "feedback-el-root", config: {projectId: "PROJECT_ID_FROM_DASHBOARD_APP", primaryColor: "#000000", textColor: "#ffffff", showEmail: "true", defaultEmail: "user@user.com", emailRequired: "true"}})
+feedbacky.render({
+  elementId: 'feedback-el-root',
+  config: {
+    projectId: 'PROJECT_ID_FROM_DASHBOARD_APP',
+    primaryColor: '#000000',
+    textColor: '#ffffff',
+    showEmail: 'true',
+    defaultEmail: 'user@user.com',
+    emailRequired: 'true',
+  },
+});
 ```
 
 ## Admin Dashboard
+
 You have to create an account on [admin dashboard](https://feedbacky-dashboard.herokuapp.com/) to render feecbacky modal on your website. Feedbacks are directly posted to your created project on dashboard.
 
 ![Feedbacky Dashboard](https://i.imgur.com/hwajDq1.jpg)
 ![Feedbacky Dashboard](https://i.imgur.com/fsu0kdd.jpg)
 ![Feedbacky Dashboard](https://i.imgur.com/SpzZBTz.jpg)
+
 ## License
+
 [MIT](https://choosealicense.com/licenses/mit/)
