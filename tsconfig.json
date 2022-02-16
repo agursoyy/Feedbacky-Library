@@ -20,7 +20,8 @@
     "esModuleInterop": true,
     "resolveJsonModule": true,
     "skipLibCheck": true,
-    "allowJs": true
+    "allowJs": true,
+    "outDir": "./dist"
   },
   "typedocOptions": {
     "out": "doc",

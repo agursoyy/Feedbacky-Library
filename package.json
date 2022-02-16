@@ -1,8 +1,9 @@
 {
   "name": "feedbacky-library",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "Feedbacky Library",
   "main": "./dist/feedbacky.js",
+  "types": "./dist/src/App.d.ts",
   "scripts": {
     "eslint": "eslint --max-warnings 0 --ext .ts,.tsx,.jsx,.js .",
     "eslint:fix": "eslint --fix --ext .ts,.tsx,.jsx,.js .",
@@ -11,8 +12,9 @@
     "prettier:fix": "npm run prettier -- --write",
     "clear": "rm -rf dist",
     "dev": "webpack-dev-server --hot --open --env local",
-    "predist": "npm run eslint && npm run prettier:check & tsc",
-    "dist": "npm run clear &&  webpack"
+    "predist": "npm run eslint && npm run prettier:check & npm run clear && tsc",
+    "dist": "webpack && npm run tsc:defs",
+    "tsc:defs": "tsc --noEmit false --declaration --emitDeclarationOnly"
   },
   "keywords": [],
   "author": "Alptekin Gursoy",
