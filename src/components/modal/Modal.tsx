@@ -104,11 +104,12 @@ const Modal = (props: ModalProps): JSX.Element => {
 
     return postSubmitMessage ?? 'Thanks';
   }, [
-    formSubmitted,
     loading,
-    submitButtonMessage,
+    formSubmitted,
     submitError,
     postSubmitMessage,
+    textColor,
+    submitButtonMessage,
   ]);
 
   return (
