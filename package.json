@@ -3,7 +3,12 @@
   "version": "0.1.3",
   "description": "Feedbacky Library",
   "main": "./dist/feedbacky.js",
-  "types": "./dist/src/App.d.ts",
+  "types": "./dist/types/App.d.ts",
+  "files": [
+    "/dist",
+    "/dist/types",
+    "/dist/feedbacky.js"
+  ],
   "scripts": {
     "eslint": "eslint --max-warnings 0 --ext .ts,.tsx,.jsx,.js .",
     "eslint:fix": "eslint --fix --ext .ts,.tsx,.jsx,.js .",
@@ -12,8 +17,10 @@
     "prettier:fix": "npm run prettier -- --write",
     "clear": "rm -rf dist",
     "dev": "webpack-dev-server --hot --open --env local",
-    "predist": "npm run eslint && npm run prettier:check & npm run clear && tsc",
+    "predist": "npm run eslint && npm run prettier:check & npm run clear && npm run tsc",
     "dist": "webpack && npm run tsc:defs",
+    "tsc": "tsc && npm run tsc:test",
+    "tsc:test": "tsc --p tsconfig.test.json",
     "tsc:defs": "tsc --noEmit false --declaration --emitDeclarationOnly"
   },
   "keywords": [],
