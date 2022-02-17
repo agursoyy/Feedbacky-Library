@@ -4,11 +4,6 @@
   "description": "Feedbacky Library",
   "main": "./dist/feedbacky.js",
   "types": "./dist/types/App.d.ts",
-  "files": [
-    "/dist",
-    "/dist/types",
-    "/dist/feedbacky.js"
-  ],
   "scripts": {
     "eslint": "eslint --max-warnings 0 --ext .ts,.tsx,.jsx,.js .",
     "eslint:fix": "eslint --fix --ext .ts,.tsx,.jsx,.js .",
