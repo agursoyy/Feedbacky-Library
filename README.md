@@ -9,7 +9,7 @@ Feedbacky is a JS library for collecting visitor feedbacks across your web proje
 ### Script Tag
 
 ```javascript
-<script src="https://unpkg.com/feedbacky-library@0.1.3/dist/feedbacky.js"></script>
+<script src="https://unpkg.com/feedbacky-library@0.1.4/dist/feedbacky.js"></script>
 ```
 
 ### NPM Installation

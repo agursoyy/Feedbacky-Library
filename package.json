@@ -1,6 +1,6 @@
 {
   "name": "feedbacky-library",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Feedbacky Library",
   "main": "./dist/feedbacky.js",
   "types": "./dist/types/App.d.ts",
