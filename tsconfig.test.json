@@ -1,0 +1,6 @@
+{
+  "extends": "./tsconfig.json",
+  "include": ["tests", "./src/**/*.test.ts", "./src/**/*.test.tsx", "./*.js"],
+  "exclude": ["node_modules"]
+}
+// config for test files and config js files (main js files(if exists) are bundled with webpack)
