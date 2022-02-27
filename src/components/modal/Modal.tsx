@@ -4,7 +4,7 @@ import styles from 'components/modal/Modal.module.scss';
 import classNames from 'classnames';
 import { FeedbackProps } from 'components/feedback/Feedback';
 
-const ENDPOINT = 'http://localhost:9000/api/feedback';
+const ENDPOINT = 'https://feedbacky-api.herokuapp.com/api/feedback';
 
 interface ModalProps extends Omit<FeedbackProps, 'zIndex'> {
   closeModal: () => void;
